@@ -16,8 +16,8 @@ export_formats:
 import_group:
   products:
     - id: ro
-    - id: pato
-    - id: omo
+    - id: iao
+    - id: obi
 robot_java_args: "-Xmx8G"
 robot_report:
   use_labels: TRUE

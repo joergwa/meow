@@ -10,7 +10,6 @@ Prefix(dcterms:=<http://purl.org/dc/terms/>)
 
 Ontology(<http://purl.obolibrary.org/obo/cato.owl>
 Import(<http://purl.obolibrary.org/obo/cato/imports/iao_import.owl>)
-Import(<http://purl.obolibrary.org/obo/cato/imports/obi_import.owl>)
 Annotation(dcterms:description "None")
 Annotation(dcterms:license <https://creativecommons.org/licenses/unspecified>)
 Annotation(dcterms:title "Cat Anatomy Ontology")
@@ -43,7 +42,6 @@ AnnotationAssertion(rdfs:label dcterms:title "title")
 
 # Class: <http://purl.obolibrary.org/obo/BFO_0000031> (generically dependent continuant)
 
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BFO_0000031> "generically dependent continuant"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/BFO_0000031> <http://purl.obolibrary.org/obo/BFO_0000002>)
 
 # Class: <http://purl.obolibrary.org/obo/CATO_0000000> (root node)

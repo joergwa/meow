@@ -9,9 +9,8 @@ Prefix(dcterms:=<http://purl.org/dc/terms/>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/cato.owl>
-Import(<http://purl.obolibrary.org/obo/cato/imports/omo_import.owl>)
-Import(<http://purl.obolibrary.org/obo/cato/imports/pato_import.owl>)
-Import(<http://purl.obolibrary.org/obo/cato/imports/ro_import.owl>)
+Import(<http://purl.obolibrary.org/obo/cato/imports/iao_import.owl>)
+Import(<http://purl.obolibrary.org/obo/cato/imports/obi_import.owl>)
 Annotation(dcterms:description "None")
 Annotation(dcterms:license <https://creativecommons.org/licenses/unspecified>)
 Annotation(dcterms:title "Cat Anatomy Ontology")

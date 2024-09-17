@@ -6,9 +6,9 @@
   
   <uri name="http://purl.obolibrary.org/obo/cato/imports/ro_import.owl" uri="imports/ro_import.owl"/>
   
-  <uri name="http://purl.obolibrary.org/obo/cato/imports/pato_import.owl" uri="imports/pato_import.owl"/>
+  <uri name="http://purl.obolibrary.org/obo/cato/imports/iao_import.owl" uri="imports/iao_import.owl"/>
   
-  <uri name="http://purl.obolibrary.org/obo/cato/imports/omo_import.owl" uri="imports/omo_import.owl"/>
+  <uri name="http://purl.obolibrary.org/obo/cato/imports/obi_import.owl" uri="imports/obi_import.owl"/>
   
   
 

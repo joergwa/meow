@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                d977d9306af850c81cca99f0a5c4b4f68da2d915fdf7b498e1df4c3f77c677ac
+CONFIG_HASH=                e40fc792b8e76d582f317b6e0dd13823e8d4bb50169f0947cfe4e55dd6021543
 
 
 # ----------------------------------------
@@ -58,7 +58,7 @@ OTHER_SRC =
 ONTOLOGYTERMS =             $(TMPDIR)/ontologyterms.txt
 EDIT_PREPROCESSED =         $(TMPDIR)/$(ONT)-preprocess.owl
 
-FORMATS = $(sort  owl obo json owl)
+FORMATS = $(sort  owl ttl owl)
 FORMATS_INCL_TSV = $(sort $(FORMATS) tsv)
 RELEASE_ARTEFACTS = $(sort $(ONT)-base $(ONT)-full $(ONT)-simple )
 
@@ -456,12 +456,8 @@ $(SUBSETDIR)/%.owl: $(ONT).owl | $(SUBSETDIR)
 .PRECIOUS: $(SUBSETDIR)/%.owl
 
 
-$(SUBSETDIR)/%.obo: $(SUBSETDIR)/%.owl
-	$(ROBOT) convert --input $< --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@.tmp.obo && grep -v ^owl-axioms $@.tmp.obo > $@ && rm $@.tmp.obo
-
-$(SUBSETDIR)/%.json: $(SUBSETDIR)/%.owl
-	$(ROBOT) convert --input $< --check false -f json -o $@.tmp.json &&\
-	mv $@.tmp.json $@
+$(SUBSETDIR)/%.ttl: $(SUBSETDIR)/%.owl
+	$(ROBOT) convert --input $< --check false -f ttl -o $@.tmp.ttl && mv $@.tmp.ttl $@
 
 
 # ---------------------------------------------
@@ -482,24 +478,15 @@ endif
 # ----------------------------------------
 
 
-$(ONT)-base.obo: $(ONT)-base.owl
-	$(ROBOT) convert --input $< --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@.tmp.obo && grep -v ^owl-axioms $@.tmp.obo > $@ && rm $@.tmp.obo
-$(ONT)-base.json: $(ONT)-base.owl
+$(ONT)-base.ttl: $(ONT)-base.owl
 	$(ROBOT) annotate --input $< --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
-		convert --check false -f json -o $@.tmp.json &&\
-		mv $@.tmp.json $@
-$(ONT)-full.obo: $(ONT)-full.owl
-	$(ROBOT) convert --input $< --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@.tmp.obo && grep -v ^owl-axioms $@.tmp.obo > $@ && rm $@.tmp.obo
-$(ONT)-full.json: $(ONT)-full.owl
+		convert --check false -f ttl -o $@.tmp.ttl && mv $@.tmp.ttl $@
+$(ONT)-full.ttl: $(ONT)-full.owl
 	$(ROBOT) annotate --input $< --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
-		convert --check false -f json -o $@.tmp.json &&\
-		mv $@.tmp.json $@
-$(ONT)-simple.obo: $(ONT)-simple.owl
-	$(ROBOT) convert --input $< --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@.tmp.obo && grep -v ^owl-axioms $@.tmp.obo > $@ && rm $@.tmp.obo
-$(ONT)-simple.json: $(ONT)-simple.owl
+		convert --check false -f ttl -o $@.tmp.ttl && mv $@.tmp.ttl $@
+$(ONT)-simple.ttl: $(ONT)-simple.owl
 	$(ROBOT) annotate --input $< --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
-		convert --check false -f json -o $@.tmp.json &&\
-		mv $@.tmp.json $@
+		convert --check false -f ttl -o $@.tmp.ttl && mv $@.tmp.ttl $@
 # ----------------------------------------
 # Release artefacts: main release artefacts
 # ----------------------------------------
@@ -508,12 +495,9 @@ $(ONT).owl: $(ONT)-full.owl
 	$(ROBOT) annotate --input $< --ontology-iri $(URIBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
 		convert -o $@.tmp.owl && mv $@.tmp.owl $@
 
-$(ONT).obo: $(ONT).owl
-	$(ROBOT) convert --input $< --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@.tmp.obo && grep -v ^owl-axioms $@.tmp.obo > $@ && rm $@.tmp.obo
-$(ONT).json: $(ONT).owl
+$(ONT).ttl: $(ONT).owl
 	$(ROBOT) annotate --input $< --ontology-iri $(URIBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
-		convert --check false -f json -o $@.tmp.json &&\
-		mv $@.tmp.json $@
+		convert --check false -f ttl -o $@.tmp.ttl && mv $@.tmp.ttl $@
 # -----------------------------------------------------
 # Release artefacts: variants (base, full, simple, etc)
 # -----------------------------------------------------

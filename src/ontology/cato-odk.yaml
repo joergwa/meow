@@ -10,8 +10,9 @@ release_artefacts:
 primary_release: full
 export_formats:
   - owl
-  - obo
-  - json
+#  - obo
+#  - json
+  - ttl
 import_group:
   products:
     - id: ro

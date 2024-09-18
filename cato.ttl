@@ -840,17 +840,6 @@ obo:BFO_0000034 rdf:type owl:Class ;
  ] .
 
 
-###  http://purl.obolibrary.org/obo/CATO_0000000
-obo:CATO_0000000 rdf:type owl:Class ;
-                 rdfs:label "root node"@en .
-
-
-###  http://purl.obolibrary.org/obo/CATO_0000001
-obo:CATO_0000001 rdf:type owl:Class ;
-                 rdfs:subClassOf obo:IAO_0000007 ;
-                 rdfs:label "MyNewConcept"@de .
-
-
 ###  http://purl.obolibrary.org/obo/IAO_0000007
 obo:IAO_0000007 rdf:type owl:Class ;
                 rdfs:subClassOf obo:IAO_0000033 ;
@@ -1004,6 +993,17 @@ obo:OBI_0000011 rdf:type owl:Class ;
                 obo:IAO_0000115 "A process that realizes a plan which is the concretization of a plan specification."@en ;
                 obo:IAO_0000412 obo:obi.owl ;
                 rdfs:label "planned process"@en .
+
+
+###  https://material-digital.de/ontology/CATO_0000000
+<https://material-digital.de/ontology/CATO_0000000> rdf:type owl:Class ;
+                                                    rdfs:label "root node"@en .
+
+
+###  https://material-digital.de/ontology/CATO_0000001
+<https://material-digital.de/ontology/CATO_0000001> rdf:type owl:Class ;
+                                                    rdfs:subClassOf obo:IAO_0000007 ;
+                                                    rdfs:label "MyNewConcept"@de .
 
 
 #################################################################

@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                6fd7f5aefa426d771988f8bc731c358da6cf388faa61ba3b5055197469c9c430
+CONFIG_HASH=                f1a24da36c866004adcbb6ec1614ce58cae9bbf5f1428c1855d4081fadaeeef9
 
 
 # ----------------------------------------
@@ -510,7 +510,7 @@ $(ONT)-base.owl: $(EDIT_PREPROCESSED) $(OTHER_SRC) $(IMPORT_FILES)
 	reason --reasoner ELK --equivalent-classes-allowed asserted-only --exclude-tautologies structural --annotate-inferred-axioms False \
 	relax \
 	reduce -r ELK \
-	remove --base-iri $(URIBASE)/CATO --axioms external --preserve-structure false --trim false \
+	remove --base-iri https://material-digital.de/ontology/ --axioms external --preserve-structure false --trim false \
 	$(SHARED_ROBOT_COMMANDS) \
 	annotate --link-annotation http://purl.org/dc/elements/1.1/type http://purl.obolibrary.org/obo/IAO_8000001 \
 		--ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \

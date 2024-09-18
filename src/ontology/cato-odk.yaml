@@ -8,6 +8,8 @@ release_artefacts:
   - full
   - simple
 primary_release: full
+namespaces:
+  - https://material-digital.de/ontology/
 export_formats:
   - owl
 #  - obo

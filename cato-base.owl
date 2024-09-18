@@ -9,12 +9,12 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:dcterms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/cato/cato-base.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/cato/releases/2024-09-17/cato-base.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/cato/releases/2024-09-18/cato-base.owl"/>
         <dce:type rdf:resource="http://purl.obolibrary.org/obo/IAO_8000001"/>
         <dcterms:description>None</dcterms:description>
         <dcterms:license rdf:resource="https://creativecommons.org/licenses/unspecified"/>
         <dcterms:title>Cat Anatomy Ontology</dcterms:title>
-        <owl:versionInfo>2024-09-17</owl:versionInfo>
+        <owl:versionInfo>2024-09-18</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -70,6 +70,21 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CATO_0000000">
         <rdfs:label xml:lang="en">root node</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CATO_0000001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CATO_0000001">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000007"/>
+        <rdfs:label xml:lang="de">MyNewConcept</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000007 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000007"/>
 </rdf:RDF>
 
 

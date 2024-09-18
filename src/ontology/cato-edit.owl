@@ -40,10 +40,6 @@ AnnotationAssertion(rdfs:label dcterms:title "title")
 #   Classes
 ############################
 
-# Class: <http://purl.obolibrary.org/obo/BFO_0000031> (generically dependent continuant)
-
-SubClassOf(<http://purl.obolibrary.org/obo/BFO_0000031> <http://purl.obolibrary.org/obo/BFO_0000002>)
-
 # Class: <http://purl.obolibrary.org/obo/CATO_0000000> (root node)
 
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CATO_0000000> "root node"@en)

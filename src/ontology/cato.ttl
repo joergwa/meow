@@ -13,11 +13,11 @@
 @base <http://purl.obolibrary.org/obo/cato.ttl> .
 
 <http://purl.obolibrary.org/obo/cato.ttl> rdf:type owl:Ontology ;
-                                           owl:versionIRI <http://purl.obolibrary.org/obo/cato/releases/2024-09-17/cato.ttl> ;
+                                           owl:versionIRI <http://purl.obolibrary.org/obo/cato/releases/2024-09-18/cato.ttl> ;
                                            dcterms:description "None" ;
                                            dcterms:license <https://creativecommons.org/licenses/unspecified> ;
                                            dcterms:title "Cat Anatomy Ontology" ;
-                                           owl:versionInfo "2024-09-17" .
+                                           owl:versionInfo "2024-09-18" .
 
 #################################################################
 #    Annotation properties
